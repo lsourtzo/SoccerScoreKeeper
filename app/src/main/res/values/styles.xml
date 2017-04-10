@@ -1,0 +1,98 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimary">#FF9800</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">@color/ButtonColor</item>
+        <!-- hide status bar -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="LineStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/LineSpace</item>
+        <item name="android:background">@color/colorL</item>
+    </style>
+
+    <style name="LayoutWH" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LayoutWH2" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="LayoutBut" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="LayoutBut2" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/SpaceS</item>
+        <item name="android:textSize">@dimen/SmallText</item>
+    </style>
+
+    <style name="LayoutTeam" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">@dimen/logo</item>
+        <item name="android:layout_height">@dimen/logo</item>
+    </style>
+
+    <style name="ButtonS" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/SpaceS</item>
+        <item name="android:textSize">@dimen/SmallText</item>
+    </style>
+
+    <style name="TeamText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/TextWhite</item>
+        <item name="android:layout_marginTop">@dimen/SpaceS</item>
+        <item name="android:padding">@dimen/SpaceS</item>
+        <item name="android:textSize">@dimen/TitleText</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ScoreText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/TextWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/SpaceS</item>
+        <item name="android:textSize">@dimen/ScoreText</item>
+    </style>
+
+    <style name="OtherText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/TextBlack</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/SpaceS</item>
+        <item name="android:textSize">@dimen/SmallText</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="CreatedByText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/colorT</item>
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:textSize">@dimen/BodySize</item>
+        <item name="android:paddingTop">@dimen/SpaceS</item>
+        <item name="android:paddingBottom">@dimen/SpaceS</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+  </resources>
+

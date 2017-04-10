@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Καταγραφέας</string>
+    <string name="YellowCards">Κίτρινη Κάρτα</string>
+    <string name="TeamB">Ομάδα Β</string>
+    <string name="TeamA">Ομάδα Α</string>
+    <string name="RedCards">Κόκκινη Κάρτα</string>
+    <string name="Penalties">Πέναλτι</string>
+    <string name="FirstFoul">Πρώτος Φάουλ</string>
+    <string name="Fouls">Φάουλ</string>
+    <string name="FirstCorner">Πρώτος Κόρνερ</string>
+    <string name="Corners" translatable="false">Κόρνερ</string>
+    <string name="Goal" translatable="false">Γκοοοοοοοολ</string>
+    <string name="Reset">Μηδενισμός</string>
+    <string name="CreatedBy">Μια δημιουργία του :</string>
+    <string name="Name">Σουρτζόπουλος Λεωνίδας</string>
+    <string name="DayNight">Ημέρα/ Νύχτα</string>
+</resources>

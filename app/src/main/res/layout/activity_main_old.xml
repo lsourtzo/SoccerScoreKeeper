@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <View
+        style="@style/LineStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="2">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im11" />
+
+            <ImageView
+                style="@style/LayoutTeam"
+                android:layout_margin="@dimen/SpaceM"
+                android:id="@+id/team_a_logo"
+                android:src="@drawable/team1"
+                android:layout_alignParentTop="true"
+                android:onClick="methodTeamA"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="1.5">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im12" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/matrix" />
+
+            <com.example.lsourtzo.scorekeeper.TextMatrix
+                android:id="@+id/textMatrix"
+                style="@style/LayoutWH"
+                android:layout_centerVertical="true"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="@color/TextWhite"
+                android:textSize="@dimen/SpaceM" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="2">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im13" />
+
+            <ImageView
+                style="@style/LayoutTeam"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/SpaceM"
+                android:id="@+id/team_b_logo"
+                android:src="@drawable/team2"
+                android:onClick="methodTeamB"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="2">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im21" />
+
+            <com.example.lsourtzo.scorekeeper.TextMatrix
+                android:id="@+id/team_a_score"
+                style="@style/ScoreText"
+                android:layout_alignParentRight="true"
+                android:text="0" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="1.5">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im22" />
+
+            <com.example.lsourtzo.scorekeeper.TextMatrix
+                style="@style/ScoreText"
+                android:layout_centerHorizontal="true"
+                android:text="-" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/LayoutWH"
+            android:layout_weight="2">
+
+            <ImageView
+                style="@style/LayoutWH"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im23" />
+
+            <com.example.lsourtzo.scorekeeper.TextMatrix
+                android:id="@+id/team_b_score"
+                style="@style/ScoreText"
+                android:layout_alignParentLeft="true"
+                android:text="0" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/LineStyle"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/LayoutWH"
+            android:paddingTop="@dimen/SpaceS"
+            android:orientation="vertical">
+
+
+            <!-- Fouls -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_foul"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/Fouls" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_foul"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Corners -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_corners"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/Corners" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_corners"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Penalties -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_pen"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/Penalties" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_pen"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Yellow Cards -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_yc"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/YellowCards" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_yc"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Red Cards -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_rc"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/RedCards" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_rc"
+                        style="@style/OtherText"
+                        android:text="0" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Firts Foul -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_ff"
+                        style="@style/OtherText"
+                        android:text="-" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/FirstFoul" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_ff"
+                        style="@style/OtherText"
+                        android:text="-" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Firts Corner -->
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_a_fc"
+                        style="@style/OtherText"
+                        android:text="-" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1.5">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        style="@style/OtherText"
+                        android:text="@string/FirstCorner" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="2">
+
+                    <com.example.lsourtzo.scorekeeper.TextAll
+                        android:id="@+id/team_b_fc"
+                        style="@style/OtherText"
+                        android:text="-" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Buttons Team A-->
+
+
+            <LinearLayout
+                style="@style/LayoutWH"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodGoalA"
+                        android:text="@string/Goal" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodFoulsA"
+                        android:text="@string/Fouls" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodCornersA"
+                        android:text="@string/Corners" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodPenaltiesA"
+                        android:text="@string/Penalties" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodYCA"
+                        android:text="@string/YellowCards" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodRCA"
+                        android:text="@string/RedCards" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/LineSpace"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/SpaceS"
+                    android:background="@color/colorLV" />
+                <!-- Buttons Team B-->
+
+                <LinearLayout
+                    style="@style/LayoutWH"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodGoalB"
+                        android:text="@string/Goal" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodFoulsB"
+                        android:text="@string/Fouls" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodCornersB"
+                        android:text="@string/Corners" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodPenaltiesB"
+                        android:text="@string/Penalties" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodYCB"
+                        android:text="@string/YellowCards" />
+
+                    <Button
+                        style="@style/ButtonS"
+                        android:onClick="methodRCB"
+                        android:text="@string/RedCards" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:onClick="resetButton"
+                android:text="@string/Reset" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.lsourtzo.scorekeeper.TextAll
+                    android:layout_width="match_parent"
+                    style="@style/CreatedByText"
+                    android:paddingLeft="@dimen/OuterSpace"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/CreatedBy"/>
+
+                <com.example.lsourtzo.scorekeeper.TextAll
+                    android:layout_width="wrap_content"
+                    style="@style/CreatedByText"
+                    android:paddingRight="@dimen/OuterSpace"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/Name"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

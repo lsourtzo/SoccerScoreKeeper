@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="TeamA">Team A</string>
+    <string name="TeamB">Team B</string>
+    <string name="Fouls">Fouls</string>
+    <string name="Corners">Corners</string>
+    <string name="Penalties">Penaltie</string>
+    <string name="YellowCards">Yellow Cards</string>
+    <string name="RedCards">Red Cards</string>
+    <string name="FirstCorner">First Corner</string>
+    <string name="FirstFoul">First Foul</string>
+    <string name="Goal">Goooal</string>
+    <string name="Reset">Reset</string>
+    <string name="CreatedBy">Created By :</string>
+    <string name="Name">Sourtzopoulos Leonidas</string>
+    <string name="DayNight">Day/Night</string>
+</resources>
